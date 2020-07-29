@@ -1,0 +1,108 @@
+<h2 class="section-title">{{ .titles.agenda }}</h2>
+
+<p>The first COVID-19 Data Forum will have two parts, the main public webinar open to all and an invited workshop.
+  We will evaluate our ability to scale the workshop to more people for future meetings.
+</p>
+
+<h3>Previous Events:</h3>
+<h4>Public Webinar - May 14 2020 1:00PM - 2:30PM PDT</h4>
+<br>
+
+<div class="schedule-tbl">
+  <table>
+    <thead>
+      <tr>
+        <th class="schedule-time">Time</th>
+        <th class="schedule-slot">Session</th>
+        <th class="schedule-description">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $slot := .agenda }}
+        {{ if ne .presentation nil }}
+          <tr>
+            <td class="schedule-time">{{ .presentation.time }}</td>
+            <td class="schedule-slot">
+            {{ with .photo }}
+              <span class="speaker-photo">
+                <img class="photo" src="{{ . }}" alt="{{ $slot.name }}">
+              </span>
+            {{ end }}
+
+              {{ .presentation.title }}
+              <span class="speakers-company">{{ .company }}</span>
+            </td>
+            <td class="schedule-description">{{ .presentation.description }}</td>
+          </tr>
+        {{ else }}
+          <tr class="schedule-other">
+            <td class="schedule-time">{{ .time }}</td>
+            <td class="schedule-slot">{{ .name }}</td>
+            <td class="schedule-description">-</td>
+          </tr>
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+
+<p>
+  <br>
+  <br>
+</p>
+
+<!--
+<h4>Invited Workshop  20:45 UTC - 22:15 UTC (2:45pm - 4:15pm PDT)</h4>
+<br>
+<br>
+<div class="schedule-tbl">
+  <table>
+    <thead>
+      <tr>
+        <th class="schedule-time">Time</th>
+        <th class="schedule-slot">Session</th>
+        <th class="schedule-description">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $slot := .workshop }}
+        {{ if ne .presentation nil }}
+          <tr>
+            <td class="schedule-time">{{ .presentation.time }}</td>
+            <td class="schedule-slot">
+            {{ with .photo }}
+              <span class="speaker-photo">
+                <img class="photo" src="{{ . }}" alt="{{ $slot.name }}">
+              </span>
+            {{ end }}
+
+              {{ .presentation.title }}
+              <span class="speakers-company">{{ .company }}</span>
+            </td>
+            <td class="schedule-description">{{ .presentation.description }}</td>
+          </tr>
+        {{ else }}
+          <tr class="schedule-other">
+            <td class="schedule-time">{{ .time }}</td>
+            <td class="schedule-slot">{{ .name }}</td>
+            <td class="schedule-description">-</td>
+          </tr>
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</div>
+-->
+
+<h4>Organizing Committee</h4>
+<br>
+<br>
+<p><a href="https://r-Consortium.org" target="_blank">Joseph Rickert</a>, Chair R Consortium Board of Directors</p>
+
+<p><a href="https://web.stanford.edu/~jmc4" target="_blank">John Chambers</a>, Stanford Department of Statistics and Stanford Data Science</p>
+
+<p><a href="https://medicine.yale.edu/profile/michael_kane/" target="_blank">Michael Kane</a>, Assistant Professor, Department of Biostatistics, Yale University</p>
+
+<p><a href="https://web.stanford.edu/~naras" target="_blank">Balasubramanian Narasimhan</a>, Senior Research Scientist, Department of Biomedical Data Sciences, Stanford University</p>
+
+<p><a href="https://datascience.stanford.edu/people/chris-mentzel" target="_blank">Chris Mentzel</a>, Executive Director, Stanford Data Science</p>

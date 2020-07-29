@@ -1,0 +1,348 @@
+baseurl: "https://r-medicine.org"
+title: "R/Medicine 2020"
+canonifyurls: true
+theme: "r-medicine"
+publishDir: public
+
+#GoogleAnalytics: "UA-165738921-1"
+
+params:
+  # Conference info
+  Name: "R/Medicine 2020"
+  Subname: "Virtual Conference"
+  Logo: "r_medicine.svg"
+  Description: >
+    Brought to you by the Children’s Hospital of Philadelphia, Yale School of Public
+    Health, and the R Consortium, the goal of the R/Medicine conference is to encourage the adoption of
+    statistical modeling and reproducible data processing in clinical practice by promoting the use of
+    the R programming environment and ecosystem.
+  Date: "August 27 – 29, 2020"
+#  Price: "" # If your event is free, just comment this line
+  Venue: "Virtual Online"
+  Address: ""
+  City:  "Virtual"
+  State: "Online"
+  Images: ["/img/R_Medicine-header.jpg"]
+  GoogleMapsKey: "my-secret-maps-key"
+
+  # Active sections on the website to deactivate comment out with '#'
+  # you can also change order here and it will reflect on page
+  Sections:
+    #- promo
+    - about
+    - events
+    - committee
+    - sponsors
+    #- schedule
+    #- speakers
+    #- agenda
+    #- location
+    #- schedule
+    #- partners
+    #- contact
+
+  # Titles which you can translate to other languages
+  Titles:
+    about: "About"
+    events: "Events"
+    committee: "Organizing Committee"
+    sponsors: "Sponsors"
+    #promo: "Promo"
+    #contact: "Contact"
+    #speakers: "Speakers"
+    #location: "Location"
+    #agenda: "Agenda"
+    #events: "Events"
+    #schedule: "Schedule"
+    #partners: "Partners"
+
+  # The Call To Action button at the header,
+  # If you don't want this, just remove the callToAction property.
+  CallToAction:
+    text: "Register now!"
+    link: "https://events.linuxfoundation.org/r-medicine/register/"
+
+  # Promo box items
+  Promo:
+    - text: >
+        This is a promotion »
+      actionURL: "https://r-consortium.org/"
+
+  # Upcoming Events
+  UpcomingEvents:
+    - title: "Day 1"
+      date: "August 27, 2020"
+      time: "8:30am - 7:00pm EDT"
+#      register: "https://events.linuxfoundation.org/r-medicine/register/"
+      description: >
+        On Day 1 of the conference...
+      agenda:
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+    - title: "Day 2"
+      date: "August 28, 2020"
+      time: "8:30am - 7:00pm EDT"
+#      register: "https://events.linuxfoundation.org/r-medicine/register/"
+      description: >
+        On Day 1 of the conference...
+      agenda:
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+#          slides: "https://slides.com"
+#          replay: "https://replay.com"
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+    - title: "Day 3"
+      date: "August 29, 2020"
+      time: "8:30am - 7:00pm EDT"
+#      register: "https://events.linuxfoundation.org/r-medicine/register/"
+      description: >
+        On Day 1 of the conference...
+      iagenda:
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+        - talk: "Talk title"
+          speakerName: "Speaker name"
+          speakerURL: "https://speakerurl.com"
+          affiliations:
+            - title: "Speaker title"
+              organizationName: "Organziation Name"
+              organizationURL: "https://organization.org"
+
+  # Past Events
+  PastEvents:
+    - title: "R/Medicine 2019"
+      date: "..."
+      time: "..."
+#      register: https://register
+#      sponsor: https://sponsor
+      description: |
+        R/Medicine 2019 was...
+
+  # List of Committee members
+  Committee:
+    - name: "NAME"
+      jobtitle: "TITLE"
+      url: "https://www.r-consortium.org"
+    - name: "NAME"
+      jobtitle: "TITLE"
+      url: "https://www.r-consortium.org"
+
+  # List of Sponsors
+  Sponsors:
+    - name: "R Consortium"
+      logo: "/img/RConsortium_Horizontal_Pantone.svg"
+      url: "https://www.r-consortium.org"
+
+## The following config options are unused.
+
+  # List of Partners
+  Partners:
+    - name: "Hugo"
+      logo: "/img/hugo.jpg"
+      url: "https://gohugo.io"
+    - name: "BrazilJS"
+      logo: "/img/partner.png"
+      url: "http://braziljs.org"
+
+  #speakers
+  Speakers:
+    - name: "Orhun Aydin"
+      photo: "https://spe.org/media/filer_public_thumbnails/filer_public/71/67/716717e4-e7ba-4ab3-8eb6-a4dfd930fec5/orhun-aydin.jpg__205x192_q85_subsampling-2.jpg"
+      bio: "Senior Researcher at ESRI and Lecturer at USC"
+      company: "ESRI"
+      link:
+        href: "https://spatial.usc.edu/team-view/orhun-aydin/"
+        text: "Website"
+    - name: "Ryan Hafen"
+      photo: "https://ryanhafen.com/img/hafen3.jpg"
+      bio: "Data scientist consultant with Preva Group, and adjunct assistant professor, Purdue University"
+      company: "Purdue University"
+      link:
+        href: "https://ryanhafen.com/"
+        text: "Website"
+    - name: "Alison L. Hill"
+      photo: "https://www.people.fas.harvard.edu/~alhill/images/alison.jpg"
+      bio: "Research Fellow and independent principal investigator at Harvard’s Program for Evolutionary Dynamics"
+      company: "Harvard - Evolutionary Dynamics"
+      link:
+        href: "https://www.people.fas.harvard.edu/~alhill/"
+        text: "Website"
+    - name: "Noam Ross"
+      photo: "https://pbs.twimg.com/profile_images/557246848625172481/n7rj_Ee4_400x400.png"
+      bio: "Senior Research Scientist, EcoHealth Alliance"
+      company: "EcoHealth Alliance"
+      link:
+        href: "https://www.ecohealthalliance.org/personnel/dr-noam-ross"
+        text: "Website"
+
+  # The entire schedule
+  Schedule:
+    - name: "Linus Torvalds"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Linux Foundation"
+      link:
+        href: "https://twitter.com/linus"
+        text: "@linus"
+      presentation:
+        title: "Digging into a Linux Kernel"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "10h00"
+
+    - name: "Bill Gates"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Microsoft"
+      link:
+        href: "https://github.com/billy95"
+        text: "@billy95"
+      presentation:
+        title: "Introducing Windows 12"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "11h00"
+
+    - name: "Lunch"
+      time: "12h00"
+
+    - name: "Chuck Norris"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Delta Command"
+      link:
+        href: "https://twitter.com/littlechuck"
+        text: "@littlechuck"
+      presentation:
+        title: "How to kill a elephant with one finger"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "13h00"
+
+    - name: "Steve Jobs"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Apple, Inc."
+      link:
+        href: "https://github.com/stevie"
+        text: "@stevie"
+      presentation:
+        title: "Presenting iPad"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "14h00"
+
+    - name: "Coffee-break"
+      time: "15h00"
+
+    - name: "Mark Zuckerberg"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Facebook"
+      link:
+        href: "http://twitter.com/zuck"
+        text: "@zuck"
+      presentation:
+        title: "Revealing Facebook Secrets"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "16h00"
+
+    - name: "Steve Wozniak"
+      photo: "/img/speaker.jpg"
+      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+      company: "Apple, Inc."
+      link:
+        href: "http://twitter.com/woz"
+        text: "@woz"
+      presentation:
+        title: "Why do I prefer Android over iPhone"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        time: "17h00"
+
+  # The entire schedule
+  Agenda:
+    - name: "Opening Remarks"
+      time: "5 min"
+
+    - name: "Speakers"
+      presentation:
+        title: "Five talks, 15-min each"
+        description: "Speakers will present virtually online via webinar format"
+        time: "75 min"
+
+    - name: "Brief Q/A and Closing"
+      presentation:
+        title: "10min Q&A"
+        description: "The forum will close with a brief Q&A session"
+        time: "10 min"
+
+  # The entire schedule
+  Workshop:
+    - name: "Opening"
+      time: "5 min"
+
+    - name: "Breakout Session 1 (facilitated groups of 5-6 people)"
+      presentation:
+        title: "Breakout Session 1"
+        description: "Breakout Session 1 (facilitated groups of 5-6 people)"
+        time: "75 min"
+
+    - name: "Report"
+      presentation:
+        title: "Report Out"
+        description: "Plenary"
+        time: "10 min"
+
+    - name: "Breakout Session 2 (facilitated groups of 5-6 people)"
+      presentation:
+        title: "Breakout Session 2"
+        description: "Breakout Session 2 (facilitated groups of 5-6 people)"
+        time: "75 min"
+
+    - name: "Report"
+      presentation:
+        title: "Report Out"
+        description: "Plenary"
+        time: "10 min"
+
+    - name: "Breakout Session 3 (Time Permitting)"
+      presentation:
+        title: "Breakout Session 3 (Time Permitting)"
+        description: "Breakout Session 2 (facilitated groups of 5-6 people)"
+        time: "75 min"
+
+    - name: "Report"
+      presentation:
+        title: "Report Out (Time Permitting)"
+        description: "Plenary"
+        time: "10 min"
+
+    - name: "Conclusion"
+      presentation:
+        title: "Conclusion / Next steps"
+        description: "Open discussion on Data Forum's next steps"
+        time: "10 min"

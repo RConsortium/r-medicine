@@ -1,0 +1,64 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/Event">
+<head>
+  <title itemprop="name">{{ .Site.Params.Name }} {{ .Site.Params.Subname }}</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="{{ .Site.Params.Name }} {{ .Site.Params.Subname }}" />
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {{ .Hugo.Generator }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+  <!--<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">-->
+  <link rel="icon" href="https://www.r-consortium.org/wp-content/uploads/sites/13/2018/09/cropped-RConsortium_Icon-32x32.png" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="https://www.r-consortium.org/wp-content/uploads/sites/13/2018/09/cropped-RConsortium_Icon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://www.r-consortium.org/wp-content/uploads/sites/13/2018/09/cropped-RConsortium_Icon-180x180.png">
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+
+</head>
+<body>
+  <div class="global">
+
+    {{ partial "nav.html" . }}
+    {{ partial "header.html" .Site.Params }}
+
+    <div class="content" id="content">
+      <div class="wrapper">
+        {{ range $section := .Site.Params.Sections }}
+          <section class="{{ $section }}" id="{{ $section }}">
+            {{ partial $section $.Site.Params }}
+          </section>
+        {{ end }}
+
+        <footer class="footer">
+          <p style="font-size: 11px;">
+            © 2020 <a href="https://r-consortium.org">R Consortium</a>, a Linux Foundation Project. R Consortium TM is a trademark of R Consortium.
+            All Rights Reserved. The <a href="https://www.linuxfoundation.org">Linux Foundation</a> has registered trademarks and uses trademarks.
+            For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage</a> page.
+            Linux is a registered trademark of Linus Torvalds.
+<a href="https://www.r-consortium.org/privacy">Privacy Policy</a> and
+<a href="http://www.linuxfoundation.org/terms">Terms of Use</a>. This site is built with <a
+href="https://gohugo.io" target="_blank">Hugo</a> and
+powered by <a href="https://netlify.com" target="_blank">Netlify</a>.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/jquery.js"><\/script>')</script>
+  {{ if isset .Site.Params "address" }}
+  {{ with .Site.Params.GoogleMapsKey }}
+  <script src="https://maps.google.com/maps/api/js?key={{ . }}"></script>
+  <script src="/js/main.js"></script>
+  {{ end }}
+  {{ end }}
+  {{ template "_internal/google_analytics_async.html" . }}
+</body>
+</html>

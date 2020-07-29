@@ -1,0 +1,8 @@
+{{ if ne .promo nil }}
+  {{ range $promo := .promo }}
+    <div class="item">
+      <p><a href="{{ .actionURL }}" target="_blank">{{ .text }}</a></p>
+    </div>
+  {{ end }}
+{{ end }}
+

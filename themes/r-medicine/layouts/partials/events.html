@@ -1,0 +1,129 @@
+<h2 class="section-title">{{ .titles.schedule }}</h2>
+
+{{ if ne .upcomingevents nil }}
+
+  <div class="events">
+
+    <h3>R/Medicine 2020</h3>
+
+    <div class="intro">
+    </div>
+
+    {{ range $slot := .upcomingevents }}
+
+      <div class="event">
+        <h4 class="title">{{ .title }}</h4>
+
+        <div class="date-and-time">
+          <p class="date">{{ .date }}</p>
+          <p class="time">{{ .time }}</p>
+        </div>
+
+        {{ if or (ne .register nil) (ne .sponsor nil) }}
+
+          <div class="actions">
+            {{ if ne .register nil }}
+              <a href="{{ .register }}" target="_blank" class="body_button">Register</a>
+            {{ end }}
+
+            {{ if ne .sponsor nil }}
+              <a href="{{ .sponsor }}" target="_blank" class="body_button">Sponsor</a>
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <div class="description">
+          <p>{{ .description }}</p>
+        </div>
+
+        {{ if ne .agenda nil }}
+            <div class="agenda">
+              <ul class="bulleted">
+                {{ range $talks := .agenda }}
+                  <li><strong><a href="{{ .speakerURL }}" target="_blank">{{ .speakerName }}</a>: {{ .talk }}</strong>
+                  {{ if ne .slides nil }}
+                    (<a href="{{ .slides }}" target="_blank">slides</a>)
+                  {{ end }}
+                  {{ if ne .replay nil }}
+                    (<a href="{{ .replay }}" target="_blank">replay</a>)
+                  {{ end }}
+
+                  <ul class="affiliations">
+                    {{ range $affiliations := .affiliations }}
+                      <li>{{ .title }}, <a href="{{ .organizationURL }}" target="_blank">{{ .organizationName }}</a></li>
+                    {{ end }}
+
+                  </ul>
+                  </li>
+
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
+
+{{ if ne .pastevents nil }}
+  <div class="events">
+
+    <h3>Past events</h3>
+
+    <div class="intro">
+      <p>We record our events, and will make them available for replay shortly after they conclude.
+    </div>
+
+    {{ range $slot := .pastevents }}
+
+      <div class="event">
+        <h4 class="title">{{ .title }}</h4>
+
+        <div class="date-and-time">
+          <p class="date">{{ .date }}</p>
+          <p class="time">{{ .time }}</p>
+        </div>
+
+        {{ if or (ne .register nil) (ne .sponsor nil) }}
+
+          <div class="actions">
+            {{ if ne .register nil }}
+              <a href="{{ .register }}" target="_blank" class="body_button">Register</a>
+            {{ end }}
+
+            {{ if ne .sponsor nil }}
+              <a href="{{ .sponsor }}" target="_blank" class="body_button">Sponsor</a>
+            {{ end }}
+          </div>
+        {{ end }}
+
+        <div class="description">
+          <p>{{ .description }}</p>
+        </div>
+
+        {{ if ne .agenda nil }}
+            <div class="agenda">
+              <ul class="bulleted">
+                {{ range $talks := .agenda }}
+                  <li><strong><a href="{{ .speakerURL }}" target="_blank">{{ .speakerName }}</a>: {{ .talk }}</strong>
+                  {{ if ne .replay nil }}
+                    (<a href="{{ .replay }}" target="_blank">replay</a>)
+                  {{ end }}
+
+                  <ul class="affiliations">
+                    {{ range $affiliations := .affiliations }}
+                      <li>{{ .title }}, <a href="{{ .organizationURL }}" target="_blank">{{ .organizationName }}</a></li>
+                    {{ end }}
+
+                  </ul>
+                  </li>
+
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
+

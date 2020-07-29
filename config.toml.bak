@@ -1,0 +1,5 @@
+baseURL = "https://r-medicine.org"
+languageCode = "en-us"
+title = "R/Medicine"
+theme = "r-medicine"
+publishDir= "public"

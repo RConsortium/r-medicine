@@ -1,0 +1,12 @@
+<h2 class="section-title">{{ .titles.committee }}</h2>
+<br>
+<p>
+  {{ range $committee := .committee }}
+    <a href="{{ .url }}" class="" itemprop="url" target="_blank">
+      {{ .name }}
+    </a> - {{ .jobtitle }}
+
+    <br>
+  {{ end }}
+</p>
+<br>
