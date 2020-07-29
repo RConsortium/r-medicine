@@ -1,4 +1,5 @@
-baseurl: "https://r-medicine.org"
+#baseurl: "https://r-medicine.org"
+baseurl: "https://musing-bose-f4bccc.netlify.app/"
 title: "R/Medicine 2020"
 canonifyurls: true
 theme: "r-medicine"
