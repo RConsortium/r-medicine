@@ -5,7 +5,7 @@ canonifyurls: true
 theme: "r-medicine"
 publishDir: public
 
-#GoogleAnalytics: "UA-165738921-1"
+GoogleAnalytics: "UA-82811140-47"
 
 params:
   # Conference info
